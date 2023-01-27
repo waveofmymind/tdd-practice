@@ -10,9 +10,10 @@ import wave.wwa.domain.problem.dto.response.ProblemResponseDto;
 public interface ProblemMapper {
 
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "problemTagList", ignore = true)
+    @Mapping(target = "problemTagList",ignore = true)
     @Mapping(target = "reviewList", ignore = true)
     Problem toEntity(ProblemRequestDto requestDto);
+
 
     ProblemResponseDto toDto(Problem problem);
 
